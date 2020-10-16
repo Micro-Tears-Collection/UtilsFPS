@@ -7,8 +7,8 @@ package code.utils;
 public class FPS {
     
     public static int frameTime; //FPS sync and stuff
-    private static long previousFrame; 
-    private static long lastFpsTest; //Last fps test(fps should update every 1000ms)
+    public static long previousFrame; 
+    public static long lastFpsTest; //Last fps test(fps should update every 1000ms)
     public static int frames; //Frames in second counter
     public static int currentTime; //Frames in second counter
     public static int fps; //Frames per second
