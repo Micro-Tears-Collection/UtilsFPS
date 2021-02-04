@@ -26,18 +26,16 @@ public class FPS {
         frames = 30; //maybe?
     }
     
-    public static void frameBegin() {
+    public static void frame() {
         if(previousFrame!=0) frameTime = (int) (System.currentTimeMillis() - previousFrame);
         previousFrame = System.currentTimeMillis();
+        
+        frames++;
+        currentTime+=frameTime;
         
         if(previousFrame-lastFpsTest>=1000) { //Fps meter
             fps=frames; frames=0; lastFpsTest=previousFrame;
         }
-    }
-    
-    public static void frameEnd() {
-        frames++;
-        currentTime+=frameTime;
     }
     
 }
